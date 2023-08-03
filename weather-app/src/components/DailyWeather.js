@@ -8,6 +8,13 @@ function DailyWeather() {
                     Friday, 31 May 2023  | Local time: 11:30 AM
                 </p>
             </div>
+
+            <div className='flex items-center justify-center my-3'>
+                <p className='text-black text-3xl font-medium'>
+                    Russia
+                </p>
+
+            </div>
         </div>
     )
 }
