@@ -1,5 +1,77 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
+  background: lightskyblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px;
 }
+.mx-auto {
+
+  margin: 0 auto;
+}
+
+.max-w-screen-md {
+  max-width: 768px;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem; 
+  padding-bottom: 1.25rem;
+}
+
+.px-32 {
+  padding-left: 8rem; 
+  padding-right: 8rem; 
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, #1c64f2, #1d4ed8);
+}
+
+.from-blue-700 {
+  background-color: #1d4ed8;
+}
+
+.to-blue-900 {
+  background-color: #1a237e;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.shadow-xl {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-gray-500 {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-button {
+
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid blue;
+  border-radius: 4px;
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: red;
+}
+
+

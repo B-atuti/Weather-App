@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react';
+// import './App.css';
+import './index.css'
+import 'tailwindcss/tailwind.css';
+import NavBar from './components/NavBar';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+const App = () => {
+  return (
+    <div>
+      <h2 className='text-center font-bold'>Weather App</h2>
+      <div className='mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-blue-700 to to-blue-900 h-fit shadow-xl shadow-gray-500'>
+      < NavBar />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;
