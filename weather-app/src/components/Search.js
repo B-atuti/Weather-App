@@ -15,7 +15,12 @@ function Search() {
             <div className='flex flex-row w-1/4 items-center justify-center'>
                 <button name='metric'
                 className='text-l text-black font-normal'
-                ></button>
+                >&deg;C
+                </button>
+                <p className='text-l text-black mx-1'></p>
+                <button name='imperial'
+                className='text-l text-black font-normal'
+                >&deg;F</button>
             </div>
         </div>
     )
