@@ -28,7 +28,7 @@ function NavBar() {
   return (
     <div className='flex items-center justify-around my-2'>
       {countries.map((country) => (
-        <button key={country.id} className='text-white text-lg font-medium '>
+        <button key={country.id} className='text-black text-lg font-medium '>
           {country.title}
         </button>
       ))}
