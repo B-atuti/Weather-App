@@ -5,6 +5,7 @@ import 'tailwindcss/tailwind.css';
 import UilReact from '@iconscout/react-unicons/icons/uil-react'
 import NavBar from './components/NavBar';
 import Search from './components/Search';
+import DailyWeather from './components/DailyWeather';
 
 
 const App = () => {
@@ -15,6 +16,8 @@ const App = () => {
       < NavBar />
       < Search />
       </div>
+      
+      < DailyWeather />
     </div>
   );
 };
