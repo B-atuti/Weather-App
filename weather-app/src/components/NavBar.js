@@ -27,7 +27,7 @@ function NavBar() {
 
   return (
     <div className='flex flex-row items-center justify-around mx-1'>
-      {countries.map((city) => (
+      {cities.map((city) => (
         <button key={city.id} className='text-black text-lg font-medium border-x-8 border-transparent hover:text-white '>
           {city.title}
         </button>
