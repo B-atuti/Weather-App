@@ -8,6 +8,7 @@ import Search from './components/Search';
 import WeatherDetails from './components/WeatherDetails';
 import LocationInfo from './components/LocationInfo';
 import DailyWeather from './components/DailyWeather';
+import WeeklyWeather from './components/WeeklyWeather';
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
 
       <WeatherDetails />
       <DailyWeather title='daily forecast' />
+      {/* <WeeklyWeather weeklyData={ /> */}
     </div>
   );
 };

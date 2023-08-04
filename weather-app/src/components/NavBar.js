@@ -26,9 +26,9 @@ function NavBar() {
   ];
 
   return (
-    <div className='flex items-center justify-around mx-1'>
+    <div className='flex flex-row items-center justify-around mx-1'>
       {countries.map((country) => (
-        <button key={country.id} className='text-black text-lg font-medium '>
+        <button key={country.id} className='text-black text-lg font-medium border-x-8 border-transparent hover:text-white '>
           {country.title}
         </button>
       ))}
