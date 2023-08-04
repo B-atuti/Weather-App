@@ -2,34 +2,34 @@ import React from 'react';
 import 'tailwindcss/tailwind.css';
 
 function NavBar() {
-  const countries = [
+  const cities = [
     {
       id: 1,
-      title: 'Brazil',
+      title: 'Brasilia',
     },
     {
       id: 2,
-      title: 'Russia',
+      title: 'Moscow',
     },
     {
       id: 3,
-      title: 'India',
+      title: 'Mumbai',
     },
     {
       id: 4,
-      title: 'China',
+      title: 'Beijing',
     },
     {
       id: 5,
-      title: 'South Africa',
+      title: 'Cape Town',
     },
   ];
 
   return (
     <div className='flex flex-row items-center justify-around mx-1'>
-      {countries.map((country) => (
-        <button key={country.id} className='text-black text-lg font-medium border-x-8 border-transparent hover:text-white '>
-          {country.title}
+      {countries.map((city) => (
+        <button key={city.id} className='text-black text-lg font-medium border-x-8 border-transparent hover:text-white '>
+          {city.title}
         </button>
       ))}
     </div>

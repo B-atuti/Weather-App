@@ -7,7 +7,7 @@ function Search() {
             <div className='flex flex-row w-4/1 items-center justify-center space-x-4'>
                 <input 
                 type="text" 
-                placeholder='search the country...'
+                placeholder='search the city...'
                 className='text-l font-light p-.8 w-full shadow-xl capitalize placeholder:lowercase ' />
                 <UilSearch size={20} className='text-black cursor-pointer transition ease-out hover:scale-110' />
             </div>

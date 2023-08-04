@@ -11,7 +11,7 @@ function LocationInfo() {
 
             <div className='flex items-center justify-center my-3'>
                 <p className='text-black text-3xl font-medium'>
-                    Russia
+                    Moscow
                 </p>
             </div>
         </div>
