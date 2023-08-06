@@ -9,9 +9,15 @@ import WeatherDetails from './components/WeatherDetails';
 import LocationInfo from './components/LocationInfo';
 import DailyWeather from './components/DailyWeather';
 import WeeklyWeather from './components/WeeklyWeather';
+import getFormattedWeatherData from './service/WeatherService';
 
+function App() {
+  const fetchWeather = async () => {
+    const data = await getFormattedWeatherData({ q: "moscow"});
+    console.log(data);
+  };
+  fetchWeather();
 
-const App = () => {
   return (
     <div>
       <h2 className='text-center font-bold'>Weather App</h2>
