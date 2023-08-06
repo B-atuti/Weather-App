@@ -17,7 +17,7 @@ function WeatherDetails() {
             </div>
 
             <div className='flex flex-row items-center justify-between text-black py-3'>
-                <img src="https://seekicon.com/free-icon-download/weather-cloudy_2.svg" 
+                <img src="https://icon-library.com/images/weather-sun-icon/weather-sun-icon-11.jpg" 
                 alt=""
                 className='w-20' 
                 />

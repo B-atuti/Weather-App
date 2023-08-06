@@ -1,3 +1,5 @@
+import { DateTime } from "luxon";
+
 const API_KEY = 'b4bb0f58f9a64179ac1103527221807';
 const BASE_URL = "http://api.weatherapi.com/v1/forecast.json?"
 
@@ -27,6 +29,14 @@ const formattedCurrentWeather = (data)  => {
 const formattedForecastWeather = (data) => {
     let { timezone, daily, hourly} =data;
     daily = daily.slice(1,6).map(d => {
+        return {
+            title: formatToLocalTime(d.dt, timezone, 'ccc'),
+            temp: d.temp.day,
+            icon: d.weather[0].icon
+        };
+    });
+
+    hourly = daily.slice(1,6).map(d => {
         return {
             title: formatToLocalTime(d.dt, timezone, 'ccc'),
             temp: d.temp.day,

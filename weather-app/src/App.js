@@ -29,6 +29,7 @@ function App() {
       < LocationInfo />
 
       <WeatherDetails />
+      <DailyWeather title='hourly forecast' />
       <DailyWeather title='daily forecast' />
       {/* <WeeklyWeather weeklyData={ /> */}
     </div>
