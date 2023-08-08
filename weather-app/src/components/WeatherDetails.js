@@ -12,7 +12,7 @@ const WeatherDetails = () => {
   useEffect(() => {
     async function fetchWeatherData() {
       try {
-        const apiKey = 'YOUR_API_KEY';
+        const apiKey = '76842783f957ba0264e735f26debdef3';
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
         const data = await response.json();
 
@@ -20,6 +20,7 @@ const WeatherDetails = () => {
         setTemperature(data.main.temp);
         setHumidity(data.main.humidity);
         setWindSpeed(data.wind.speed);
+        setWeatherDescription(data.weather[0].description);
       } catch (error) {
         console.error(error);
       }
