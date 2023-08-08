@@ -7,7 +7,7 @@ const LocationInfo = ({ city, icon, temperature, humidity, windSpeed }) => {
         <img src={icon} alt="Weather Icon" className="w-8 h-8 mr-2" />
         <div>
           <p className="font-bold">{city}</p>
-          <button className="text-blue-500">Switch Temp</button>
+          <button className="text-blue-500 hover:text-black">Switch Temp</button>
         </div>
       </div>
       <div className="flex flex-col text-right">

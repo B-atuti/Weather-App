@@ -9,7 +9,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="bg-white p-2 rounded-md shadow-md transition mt-4 flex flex-row justify-between">
+    <div className="bg-white p-2 rounded-md shadow-md transition mt-4 flex flex-row justify-between px-24">
       <input
         type="text"
         className="bg-transparent border-solid-black text-black focus:outline-none pl-8"

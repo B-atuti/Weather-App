@@ -37,7 +37,6 @@ const WeatherDetails = () => {
         humidity={humidity}
         windSpeed={windSpeed}
       />
-      {/* Additional weather details */}
     </div>
   );
 };

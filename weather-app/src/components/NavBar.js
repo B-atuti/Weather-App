@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <nav className="bg-blue-400 p-5 w-full mt-5 px-32 shadow-md">
+    <nav className="bg-blue-400 p-5 w-full mt-5 px-64 shadow-md">
       <div className="flex justify-between items-center">
         <div>
-          <Link to="/" className="text-white text-xl font-bold">
+          <Link to="/" className="text-white text-2xl font-bold">
             Weather App
           </Link>
         </div>
