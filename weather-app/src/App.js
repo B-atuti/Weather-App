@@ -4,11 +4,13 @@ import NavBar from './components/NavBar';
 import WeatherDetails from './components/WeatherDetails';
 import DailyWeather from './components/DailyWeather';
 import WeeklyWeather from './components/WeeklyWeather';
+import SearchBar from './components/SearchBar';
 
 function App() {
   return (
     <div>
       <NavBar />
+      <SearchBar />
       <Routes>
         <Route exact path="/" component={WeatherDetails} />
         <Route path="/daily" component={DailyWeather} />
