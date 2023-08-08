@@ -1,68 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { UilClouds } from '@iconscout/react-unicons';
 
-function DailyWeather( { title } ) {
-    return (
-        <div>
-            <div className='flex items-center justify-start mt-6'>
-                <p className='text-black font-medium uppercase'>{title}
-                </p>
-            </div>
-            <hr className='my-2'/>
+const DailyWeather = ({ dailyData }) => {
+  return (
+    <div>
+      <h2 className="text-lg font-semibold mb-4">Daily Weather Forecast</h2>
+      <div className="grid grid-cols-3 gap-4">
+        {dailyData.map((day, index) => (
+          <div key={index} className="border p-4 rounded-md">
+            <h3 className="text-md font-medium">{day.date}</h3>
+            <img src={UilClouds} alt="Weather Icon" className="w-8 h-8 mt-2" />
+            <p className="mt-2">{day.temperature}&deg;</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-            <div className='flex flex-row items-center justify-between text-black'>
-                <div className='flex flex-col items-center justify-center border border-solid border-black border-t-2 rounded-lg box-border-' >
-                    <p className='font-light text-sm'>
-                        07:00am
-                    </p>
-                    <img src="https://seekicon.com/free-icon-download/weather-cloudy_2.svg" 
-                    className='w-12 my-1'
-                    alt=""
-                     />
-                     <p className='font-medium'>10&deg;</p>
-                </div>
-                <div className='flex flex-col items-center justify-center border border-solid border-black border-t-2 rounded-lg'>
-                    <p className='font-light text-sm'>
-                        09:00am
-                    </p>
-                    <img src="https://seekicon.com/free-icon-download/weather-cloudy_2.svg" 
-                    className='w-12 my-1'
-                    alt=""
-                     />
-                     <p className='font-medium'>10&deg;</p>
-                </div>
-                <div className='flex flex-col items-center justify-center border border-solid border-black border-t-2 rounded-lg'>
-                    <p className='font-light text-sm'>
-                        11:00am
-                    </p>
-                    <img src="https://icon-library.com/images/weather-sun-icon/weather-sun-icon-11.jpg" 
-                    className='w-12 my-1'
-                    alt=""
-                     />
-                     <p className='font-medium'>31&deg;</p>
-                </div>
-                <div className='flex flex-col items-center justify-center border border-solid border-black border-t-2 rounded-lg'>
-                    <p className='font-light text-sm'>
-                        2:00pm
-                    </p>
-                    <img src="https://icon-library.com/images/weather-sun-icon/weather-sun-icon-25.jpg" 
-                    className='w-12 my-1'
-                    alt=""
-                     />
-                     <p className='font-medium'>24&deg;</p>
-                </div>
-                <div className='flex flex-col items-center justify-center border border-solid border-black border-t-2 rounded-lg'>
-                    <p className='font-light text-sm'>
-                        04:00pm
-                    </p>
-                    <img src="https://www.pngitem.com/pimgs/m/106-1066957_cloudy-foggy-windy-weather-symbol-svg-png-icon.png" 
-                    className='w-12 my-1 bg-black'
-                    alt=""
-                     />
-                     <p className='font-medium'>16&deg;</p>
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default DailyWeather
+export default DailyWeather;

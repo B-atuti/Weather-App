@@ -1,39 +1,32 @@
 import React from 'react';
-import 'tailwindcss/tailwind.css';
+import { Link } from 'react-router-dom';
 
-function NavBar() {
-  const cities = [
-    {
-      id: 1,
-      title: 'Brasilia',
-    },
-    {
-      id: 2,
-      title: 'Moscow',
-    },
-    {
-      id: 3,
-      title: 'Mumbai',
-    },
-    {
-      id: 4,
-      title: 'Beijing',
-    },
-    {
-      id: 5,
-      title: 'Cape Town',
-    },
-  ];
-
+const NavBar = () => {
   return (
-    <div className='flex flex-row items-center justify-around mx-1'>
-      {cities.map((city) => (
-        <button key={city.id} className='text-black text-lg font-medium border-x-8 border-transparent hover:text-white '>
-          {city.title}
-        </button>
-      ))}
-    </div>
+    <nav className="bg-blue-500 p-4 w-full mt-5">
+      <div className="flex justify-between items-center">
+        <div>
+          <Link to="/" className="text-white text-xl font-bold">
+            Weather App
+          </Link>
+        </div>
+      </div>
+      <div className="flex justify-center mt-4">
+        <Link
+          to="/daily"
+          className="text-black mr-4 bg-white p-2 rounded-lg shadow-blue-300 hover:text-white hover:bg-black transition duration-300"
+        >
+          Daily
+        </Link>
+        <Link
+          to="/weekly"
+          className="text-black bg-white p-2 rounded-lg shadow-blue-300 hover:text-white hover:bg-black transition duration-300"
+        >
+          Weekly
+        </Link>
+      </div>
+    </nav>
   );
-}
+};
 
 export default NavBar;

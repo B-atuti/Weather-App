@@ -1,39 +1,21 @@
-// import React from 'react';
-// import './App.css';
-import './index.css'
-import 'tailwindcss/tailwind.css';
-import UilReact from '@iconscout/react-unicons/icons/uil-react'
+import React from 'react';
+import { Routes, Route, } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Search from './components/Search';
 import WeatherDetails from './components/WeatherDetails';
-import LocationInfo from './components/LocationInfo';
 import DailyWeather from './components/DailyWeather';
 import WeeklyWeather from './components/WeeklyWeather';
-import getFormattedWeatherData from './service/WeatherService';
 
 function App() {
-  const fetchWeather = async () => {
-    const data = await getFormattedWeatherData({ q: "moscow"});
-    console.log(data);
-  };
-  fetchWeather();
-
   return (
     <div>
-      <h2 className='text-center font-bold'>Weather App</h2>
-      <div className='mx-auto max-w-screen-md mt-7 py-5 px-32 bg-gradient-to-br from-blue-300 to to-blue-400 h-fit shadow-xl shadow-gray-500 '>
-      < NavBar />
-      < Search />
-      </div>
-
-      < LocationInfo />
-
-      <WeatherDetails />
-      <DailyWeather title='hourly forecast' />
-      <DailyWeather title='daily forecast' />
-      {/* <WeeklyWeather weeklyData={ /> */}
+      <NavBar />
+      <Routes>
+        <Route exact path="/" component={WeatherDetails} />
+        <Route path="/daily" component={DailyWeather} />
+        <Route path="/weekly" component={WeeklyWeather} />
+      </Routes>
     </div>
   );
-};
+}
 
 export default App;
