@@ -16,12 +16,13 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Search..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
+        style={{ textTransform: 'capitalize' }} 
       />
       <button
-        className=" ml-28 align-middle transform -translate-y-1/2 bg-transparent text-black hover:text-blue-800 transition mt-3 "
+        className="ml-2 align-middle transform -translate-y-1/2 bg-transparent text-black hover:text-blue-800 transition mt-3"
         onClick={handleSearch}
       >
-        <UilSearch size="18" /> 
+        <UilSearch size="18" />
       </button>
     </div>
   );
